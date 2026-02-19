@@ -1,0 +1,292 @@
+/* ============================================
+   PRANIC HEALING CRM - UX/UI ENHANCEMENTS
+   ============================================ */
+
+/* 1. COLOR PSYCHOLOGY FOR WELLNESS */
+:root {
+    /* Healing/Meditation colors */
+    --primary-zen: #7c3aed;      /* Purple - Spirituality */
+    --secondary-calm: #06b6d4;   /* Cyan - Tranquility */
+    --accent-energy: #f59e0b;    /* Amber - Warmth & Energy */
+    --success-growth: #10b981;   /* Green - Growth & Health */
+    --danger-alert: #ef4444;     /* Red - Alerts only */
+    --neutral-light: #f3f4f6;    /* Light Gray - Simplicity */
+}
+
+body {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    color: #374151;
+}
+
+/* 2. CARD DESIGN - Soft shadows & rounded corners */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* 3. STATS CARDS - Micro-interactions */
+.stats-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-zen);
+    transition: width 0.3s ease;
+}
+
+.stats-card:hover::before {
+    width: 6px;
+}
+
+.stats-card .h3 {
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-zen), var(--secondary-calm));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 4. SIDEBAR NAVIGATION - Improved Readability */
+.sidebar-nav {
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+}
+
+.sidebar-nav .nav-link {
+    color: #6b7280;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.sidebar-nav .nav-link:hover {
+    background: var(--neutral-light);
+    color: var(--primary-zen);
+    padding-left: 20px;
+}
+
+.sidebar-nav .nav-link.active {
+    background: linear-gradient(135deg, var(--primary-zen), var(--secondary-calm));
+    color: white;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.sidebar-nav .nav-link i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 5. FORMS - Enhanced Input Fields */
+.form-control,
+.form-select {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-zen);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+/* 6. BUTTONS - Accessible & Interactive */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary-zen);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #6d28d9;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: var(--success-growth);
+}
+
+.btn-success:hover {
+    background: #059669;
+}
+
+/* 7. TABLE IMPROVEMENTS */
+.table {
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.table thead {
+    background: var(--neutral-light);
+    border-bottom: 2px solid #d1d5db;
+}
+
+.table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.table td, .table th {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* 8. MODALS - Clean & Focused */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-zen), var(--secondary-calm));
+    color: white;
+    border: none;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* 9. PROGRESS BARS - Visual Feedback */
+.progress {
+    height: 6px;
+    border-radius: 3px;
+    background: #e5e7eb;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-zen), var(--secondary-calm));
+    border-radius: 3px;
+}
+
+/* 10. CHARTS CONTAINER */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+/* 11. NOTIFICATIONS & ALERTS */
+.alert {
+    border: none;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background: #ecfdf5;
+    color: #065f46;
+    border-left-color: var(--success-growth);
+}
+
+.alert-warning {
+    background: #fffbeb;
+    color: #92400e;
+    border-left-color: var(--accent-energy);
+}
+
+.alert-danger {
+    background: #fef2f2;
+    color: #7f1d1d;
+    border-left-color: var(--danger-alert);
+}
+
+/* 12. LOADING ANIMATIONS */
+.spinner-border {
+    border-top-color: var(--primary-zen);
+}
+
+.skeleton-loader {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* 13. RESPONSIVE DESIGN - Mobile First */
+@media (max-width: 768px) {
+    .sidebar-nav {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 1050;
+        transition: left 0.3s ease;
+    }
+    
+    .sidebar-nav.show {
+        left: 0;
+    }
+    
+    .stats-card {
+        margin-bottom: 16px;
+    }
+}
+
+/* 14. ACCESSIBILITY - Focus States */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--primary-zen);
+    outline-offset: 2px;
+}
+
+/* 15. DARK MODE SUPPORT */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #111827;
+        color: #f3f4f6;
+    }
+    
+    .card {
+        background: #1f2937;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .sidebar-nav {
+        background: #1f2937;
+        border-right-color: #374151;
+    }
+}
