@@ -1,0 +1,1 @@
+{\n  "name": "spotprvnpp/pranic-healing-wordpress-suite",\n  "description": "A pranic healing WordPress suite",\n  "require": {\n    "php": ">=7.4"\n  },\n  "require-dev": {}\n}
